@@ -1290,5 +1290,14 @@ document.addEventListener('keydown',function(e){
 });
 
 /* ═══════════════════════════════════════════
-   INIT — pre-set dates like Élysian
-══════════════════════════════════════�
+   INIT — pre-set dates
+═══════════════════════════════════════════ */
+(function(){
+  const dep=new Date();dep.setDate(dep.getDate()+7);
+  const ret=new Date(dep);ret.setDate(ret.getDate()+7);
+  pickDate('dep',fmtISO(dep));
+  pickDate('ret',fmtISO(ret));
+})();
+</script>
+</body>
+</html>
